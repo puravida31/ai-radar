@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Radar v17.0 – Painel Interativo com Preços Reais</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="fetch_prices.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background: #1a202c; color: #eee; padding: 20px; }
+    h2, h3 { color: #63b3ed; }
+    table { width: 100%; margin-top: 20px; border-collapse: collapse; }
+    th, td { padding: 10px; border: 1px solid #444; text-align: center; }
+    th { background: #2d3748; }
+    .progress-container { margin-top: 20px; }
+    .bar { background: #2d3748; border-radius: 8px; overflow: hidden; margin: 10px 0; }
+    .fill { height: 24px; background: #48bb78; text-align: right; padding-right: 10px; color: white; line-height: 24px; }
+  </style>
+</head>
+<body>
+  <h2>📊 AI Radar v17.0 – Metas & Preços ao Vivo</h2>
+
+  <table id="price-table">
+    <thead>
+      <tr><th>Empresa</th><th>Ticker</th><th>Preço Atual (USD)</th><th>Meta (USD)</th><th>Progresso</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>NVIDIA</td><td>NVDA</td><td id="NVDA-price">⏳</td><td>1200</td><td><div class="bar"><div id="NVDA-bar" class="fill" style="width:0%">0%</div></div></td></tr>
+      <tr><td>Microsoft</td><td>MSFT</td><td id="MSFT-price">⏳</td><td>950</td><td><div class="bar"><div id="MSFT-bar" class="fill" style="width:0%">0%</div></div></td></tr>
+      <tr><td>Google</td><td>GOOGL</td><td id="GOOGL-price">⏳</td><td>300</td><td><div class="bar"><div id="GOOGL-bar" class="fill" style="width:0%">0%</div></div></td></tr>
+      <tr><td>Amazon</td><td>AMZN</td><td id="AMZN-price">⏳</td><td>250</td><td><div class="bar"><div id="AMZN-bar" class="fill" style="width:0%">0%</div></div></td></tr>
+      <tr><td>Meta</td><td>META</td><td id="META-price">⏳</td><td>520</td><td><div class="bar"><div id="META-bar" class="fill" style="width:0%">0%</div></div></td></tr>
+    </tbody>
+  </table>
+</body>
+</html>
